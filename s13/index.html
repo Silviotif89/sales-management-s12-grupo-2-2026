@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0c1930">
+<meta name="description" content="Clase interactiva de Sales Management: CRM, pipeline, Excel, Power BI y Metabase. Simulaciones educativas sin conexión.">
+<title>Sales Management · Sesión 13 · UAM</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="app">
+ <header class="topbar">
+   <div class="brand"><span class="brand-square">S<span class="brand-dot">.</span></span><div><strong>SALES MANAGEMENT</strong><small>UAM · Sesión 13 · Tecnología aplicada a ventas</small></div></div>
+   <div class="top-actions">
+    <span id="nicaragua-clock" class="clock" aria-label="Hora de Nicaragua">Nicaragua --:--</span>
+    <button id="index-btn" class="top-btn" type="button" title="Abrir índice">☷ <span>Índice</span></button>
+    <button id="guide-btn" class="top-btn" type="button" title="Guía docente">◧ <span>Guía docente</span></button>
+    <button id="pause-btn" class="top-btn" type="button" title="Temporizador">◷ <span>Pausa</span></button>
+    <button id="fullscreen-btn" class="top-btn" type="button" title="Pantalla completa">⛶ <span>Presentar</span></button>
+   </div>
+ </header>
+ <main class="stage-area" id="stage-area">
+   <div id="stage" class="stage" role="region" aria-label="Diapositiva actual" aria-live="polite"></div>
+ </main>
+ <footer class="bottom-bar">
+  <div class="progress-left"><span id="section-name">INTRODUCCIÓN</span><span class="small-divider">/</span><span id="slide-position">01 / 35</span></div>
+  <div class="bar-track"><div id="progress" class="bar-fill"></div></div>
+  <div class="bottom-actions"><span class="finish-countdown" title="Tiempo restante para terminar la clase"><span class="sun-dot"></span> Restan <b id="class-remaining">--:--:--</b></span><button id="reset-presentation" title="Reiniciar diapositivas sin borrar equipo">↺</button><button id="prev-slide" class="round-btn" title="Anterior (←)">‹</button><button id="next-slide" class="round-btn primary" title="Siguiente (→)">›</button></div>
+ </footer>
+</div>
+<div id="shade" class="shade hidden" aria-hidden="true"></div>
+<aside id="index-drawer" class="drawer hidden" aria-label="Índice de diapositivas"><div class="drawer-heading"><div><small>CONTENIDO</small><h2>Índice de la clase</h2></div><button class="icon-close" data-close="index-drawer" aria-label="Cerrar">×</button></div><div id="index-items" class="index-items"></div><div class="drawer-foot">Seleccioná cualquier tema para saltar directamente.</div></aside>
+<aside id="guide-drawer" class="drawer hidden" aria-label="Guía docente"><div class="drawer-heading"><div><small>SOLO PARA EL PROFESOR</small><h2>Guía docente</h2></div><button class="icon-close" data-close="guide-drawer" aria-label="Cerrar">×</button></div><div id="guide-body" class="guide-body"></div></aside>
+<div id="pause-modal" class="modal-shell hidden" role="dialog" aria-label="Temporizador de pausa" aria-modal="true"><div class="small-modal"><div class="modal-head"><div><small>CONTROL DE TIEMPO</small><h2>Pausa de la clase</h2></div><button class="icon-close" data-close="pause-modal">×</button></div><div class="timer-display" id="timer-display">10:00</div><div class="timer-presets"><button data-minutes="5">5 minutos</button><button data-minutes="10" class="selected">10 minutos</button><button data-minutes="15">15 minutos</button></div><div class="timer-actions"><button id="timer-start" class="btn btn-main">Iniciar</button><button id="timer-resume" class="btn btn-subtle">Pausar</button><button id="timer-reset" class="btn btn-outline">Reiniciar</button></div><div class="tiny-note">Funciona localmente mientras la página permanezca abierta.</div></div></div>
+<div id="lab-shell" class="lab-shell hidden" role="dialog" aria-label="Laboratorio interactivo" aria-modal="true"><div class="lab-window"><div class="lab-top"><div><small id="lab-kicker">SIMULACIÓN DIDÁCTICA · DATOS FICTICIOS</small><h2 id="lab-title">Laboratorio</h2></div><div class="lab-top-actions"><span id="lab-sync-note" class="local-pill">● Guardado local</span><button id="lab-close" class="btn btn-outline">Volver a las diapositivas ×</button></div></div><div id="lab-body" class="lab-body"></div></div></div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script src="scripts/data.js"></script>
+<script src="scripts/slides.js"></script>
+<script src="scripts/app.js"></script>
+</body>
+</html>
